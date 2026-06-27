@@ -43,44 +43,44 @@ If any CRITICAL findings: append to reports/needs-human.md:
 
 ## Audit Checklist
 
-Run every check on every file reviewed. Mark: ✅ PASS / ⚠️ WARNING / 🚨 CRITICAL / ℹ️ INFO
+Run every check on every file reviewed. Mark: PASS / WARNING / CRITICAL / INFO
 
 ### PACKAGE MANAGER
-- No `package-lock.json` or `yarn.lock` in project root → 🚨 CRITICAL if found
-- No `npm` or `yarn` commands in package.json scripts → ⚠️ WARNING
-- `pnpm-lock.yaml` is the only lock file → 🚨 CRITICAL if wrong lock file present
+- No `package-lock.json` or `yarn.lock` in project root → CRITICAL if found
+- No `npm` or `yarn` commands in package.json scripts → WARNING
+- `pnpm-lock.yaml` is the only lock file → CRITICAL if wrong lock file present
 
 ### HARDCODED VALUES
-- No API keys, tokens, secrets, passwords in source code → 🚨 CRITICAL
-- No hardcoded production/staging URLs that should be env vars → ⚠️ WARNING
-- No hardcoded user IDs or magic numbers without named constants → ⚠️ WARNING
-- No hardcoded file paths (use env vars, path.join, __dirname) → ⚠️ WARNING
+- No API keys, tokens, secrets, passwords in source code → CRITICAL
+- No hardcoded production/staging URLs that should be env vars → WARNING
+- No hardcoded user IDs or magic numbers without named constants → WARNING
+- No hardcoded file paths (use env vars, path.join, __dirname) → WARNING
 
 ### TYPE SAFETY (TypeScript projects only)
-- No `any` types unless followed by justification comment → ⚠️ WARNING
-- No `@ts-ignore` without explanation comment on same line → ⚠️ WARNING
-- No implicit any in function signatures → ⚠️ WARNING
+- No `any` types unless followed by justification comment → WARNING
+- No `@ts-ignore` without explanation comment on same line → WARNING
+- No implicit any in function signatures → WARNING
 
 ### CODE PATTERNS
-- No `console.log` in production code → ⚠️ WARNING
-- No TODO/FIXME without a linked task ID (e.g., `// TODO: task-012`) → ℹ️ INFO
-- No commented-out blocks of dead code → ℹ️ INFO
-- No unused imports → ℹ️ INFO
-- All async operations have error handling (try/catch or .catch()) → ⚠️ WARNING
-- No empty catch blocks (`catch(e) {}`) — must at least log → ⚠️ WARNING
-- No floating promises (missing await) → 🚨 CRITICAL
+- No `console.log` in production code → WARNING
+- No TODO/FIXME without a linked task ID (e.g., `// TODO: task-012`) → INFO
+- No commented-out blocks of dead code → INFO
+- No unused imports → INFO
+- All async operations have error handling (try/catch or .catch()) → WARNING
+- No empty catch blocks (`catch(e) {}`) — must at least log → WARNING
+- No floating promises (missing await) → CRITICAL
 
 ### INTEGRATION HEALTH
-- New code follows existing naming conventions (camelCase, PascalCase, etc.) → ⚠️ WARNING if not
-- New components/functions match patterns of existing ones → ℹ️ INFO if diverging significantly
-- No duplicate functionality (similar util exists elsewhere) → ℹ️ INFO
-- Database queries use existing ORM patterns, not raw SQL mixed in → ⚠️ WARNING
+- New code follows existing naming conventions (camelCase, PascalCase, etc.) → WARNING if not
+- New components/functions match patterns of existing ones → INFO if diverging significantly
+- No duplicate functionality (similar util exists elsewhere) → INFO
+- Database queries use existing ORM patterns, not raw SQL mixed in → WARNING
 
 ### GODOT / GAME PROJECTS (GDScript only)
-- No hardcoded screen resolution or window_size → ⚠️ WARNING
-- Signals properly disconnected in _exit_tree() → ⚠️ WARNING if missing
-- No _process() where _physics_process() is more appropriate for physics logic → ℹ️ INFO
-- No orphan nodes (queue_free() called appropriately) → ⚠️ WARNING
+- No hardcoded screen resolution or window_size → WARNING
+- Signals properly disconnected in _exit_tree() → WARNING if missing
+- No _process() where _physics_process() is more appropriate for physics logic → INFO
+- No orphan nodes (queue_free() called appropriately) → WARNING
 
 ---
 
@@ -96,13 +96,13 @@ Run every check on every file reviewed. Mark: ✅ PASS / ⚠️ WARNING / 🚨 C
 
 ## Findings
 
-### 🚨 CRITICAL (N)
+### CRITICAL (N)
 - `[file:line]` — [description]
 
-### ⚠️ WARNING (N)
+### WARNING (N)
 - `[file:line]` — [description]
 
-### ℹ️ INFO (N)
+### INFO (N)
 - `[file:line]` — [description]
 
 ## Summary

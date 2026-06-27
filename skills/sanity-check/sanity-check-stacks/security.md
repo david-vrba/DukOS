@@ -1,6 +1,6 @@
 # Sanity Check — Security Module
 
-> Loaded by `sanity-check` skill on EVERY run, regardless of stack. Any FAIL in this module is automatically a 🔴 BLOCKER — security vulnerabilities do not ship, ever.
+> Loaded by `sanity-check` skill on EVERY run, regardless of stack. Any FAIL in this module is automatically a BLOCKER — security vulnerabilities do not ship, ever.
 >
 > For each check: read the changed code and ask "can an attacker, a malicious user, or a misconfigured environment exploit this?"
 

@@ -52,7 +52,7 @@ Read `distribution/_index.md` at every handoff. Update project stages and next-a
    - If age ≥ `auto_approve_hours` from config:
      a. Move the file: `reports/pending-approval/[agent]/[filename]` → `reports/approved/[agent]/[filename]`
      b. If `notify: true` in config → send a message via your messaging app MCP (use MESSAGING_CHAT_ID from env):
-        `"🤖 Holiday Mode auto-approved: [agent]/[filename] — [first line after Purpose: in the file, or filename if none]"`
+        `"Holiday Mode auto-approved: [agent]/[filename] — [first line after Purpose: in the file, or filename if none]"`
      c. Note in your handoff: `auto-approved (holiday mode): [agent]/[filename]`
 5. Cap: do not auto-approve more than 3 items per orchestrator run (safety limit).
 
@@ -109,18 +109,18 @@ File: `reports/daily-briefing.md` — max 300 words
 **Holiday Mode — pending digest (7am run only, when active):**
 If holiday mode is active, after writing the briefing, send ONE message via your messaging app summarizing the full approval queue. Format:
 ```
-⛱ Holiday Morning Digest — [date]
+Holiday Morning Digest — [date]
 
-✅ Auto-approved since last run: [count] items
-⏳ Still pending review:
+Auto-approved since last run: [count] items
+Still pending review:
   • [agent]/[filename] — RISK:[level] — [one-line purpose]
   • ...
-🔴 HIGH risk (always needs you):
+HIGH risk (always needs you):
   • [agent]/[filename] — [one-line description]
 
 Reply to approve: run `bash tools/holiday-review.sh`
 ```
-If queue is empty: send "⛱ Queue clear — nothing pending review."
+If queue is empty: send "Queue clear — nothing pending review."
 Cap: send this digest only once per 7am run (not at handoff or evening runs).
 
 ---

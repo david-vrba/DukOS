@@ -1,15 +1,19 @@
-# DukOS 🦆
+<div align="center">
 
-<p align="center">
-  <img src="docs/assets/og-image.png" alt="DukOS — autonomous agents that run your operations while you sleep" width="100%" />
-</p>
+<img src="docs/assets/og-image.png" alt="DukOS" width="600" />
 
-> **Autonomous AI agents that run your startup's operations on a schedule — while you sleep.**
-> Research, marketing, growth, content, outreach, admin. You set the direction. DukOS does the shift work.
+# DukOS
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Powered by Claude Code](https://img.shields.io/badge/Powered%20by-Claude%20Code-orange)](https://claude.ai/code)
-[![Status](https://img.shields.io/badge/status-production-brightgreen)]()
+**Autonomous AI agents that run your startup's operations on a schedule — while you sleep.**
+
+Research, marketing, growth, content, outreach, admin.<br/>
+You set the direction; DukOS does the shift work.
+
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-FFE70F?style=flat-square" alt="MIT License" /></a>
+<a href="https://claude.ai/code"><img src="https://img.shields.io/badge/Powered_by-Claude_Code-FF9900?style=flat-square" alt="Powered by Claude Code" /></a>
+<img src="https://img.shields.io/badge/status-production-DBA300?style=flat-square" alt="Status: production" />
+
+</div>
 
 ---
 
@@ -138,12 +142,12 @@ Different founders need different teams. At setup you pick a **template**, and D
 
 | Template | Best for | Core agents |
 |---|---|---|
-| 🧑‍💻 **Dev Studio** | Solo devs, SaaS founders | builder, qa, research, seo, content, growth |
-| 📣 **Marketing Engine** | Content creators, growth teams | marketing, seo, copywriter, content, tiktok, community |
-| 🎮 **Game Studio** | Indie game devs | gamedev, aso, content, community, qa |
-| 💰 **Finance & Research** | Traders, analysts | portfolio-analyst, research, data, competition-research |
-| 🧘 **Founder OS** | Solo founders running everything | orchestrator, research, marketing, content, admin, habit |
-| 🏗 **Full Studio** | The whole portfolio at once | everything — the flagship config |
+| **Dev Studio** | Solo devs, SaaS founders | builder, qa, research, seo, content, growth |
+| **Marketing Engine** | Content creators, growth teams | marketing, seo, copywriter, content, tiktok, community |
+| **Game Studio** | Indie game devs | gamedev, aso, content, community, qa |
+| **Finance & Research** | Traders, analysts | portfolio-analyst, research, data, competition-research |
+| **Founder OS** | Solo founders running everything | orchestrator, research, marketing, content, admin, habit |
+| **Full Studio** | The whole portfolio at once | everything — the flagship config |
 
 Templates are the **honest scaling story.** You don't run a hundred agents — you run the ~15 that match what you're doing.
 
@@ -184,18 +188,17 @@ DukOS runs on the Anthropic API (and optionally local models). **You pay for wha
 
 | Mode | Agents | Model tier | Rough monthly cost |
 |---|---|---|---|
-| 🌱 **Starter** | ~8 | Haiku / local | <$30, or free locally |
-| ⚡ **Standard** | ~15 (one template) | Sonnet | $30–150 |
-| ⚡⚡ **Full** | ~24 (whole roster) | Sonnet + Haiku | $150–500 |
-| ⚡⚡⚡ **Max** | Whole roster × multiple project teams | Opus + Sonnet | $500+ |
+| **Starter** | ~8 | Haiku / local | <$30, or free locally |
+| **Standard** | ~15 (one template) | Sonnet | $30–150 |
+| **Full** | ~24 (whole roster) | Sonnet + Haiku | $150–500 |
+| **Max** | Whole roster × multiple project teams | Opus + Sonnet | $500+ |
 
 Run `bash tools/cost-estimate.sh` **before** your first launch — it shows a monthly forecast based on your config.
 
-> ⚠️ Heavy configurations can cost **$500+/month** in API fees — you will be billed. Estimate first.
-> ⚠️ DukOS is not a SaaS — you need Git, a terminal, and an API key.
-> ⚠️ Rate limits apply. Built-in backoff is included; plan your shift schedule accordingly.
+> **Cost warning.** Heavy configurations can cost **$500+/month** in API fees — you will be billed. Estimate first.
+> DukOS is not a SaaS — you need Git, a terminal, and an API key. Rate limits apply; built-in backoff is included, so plan your shift schedule accordingly.
 
-### Caveman Mode 🪨
+### Caveman Mode
 
 A token-saving toggle. When on, agents strip all filler and write in compressed fragments.
 
@@ -233,11 +236,19 @@ No manual recovery. It's automatic.
 
 ---
 
-## The ducks 🦆
+## The ducks
+
+<div align="center">
+  <img src="docs/assets/duck-walk.gif" alt="DukOS mascot" width="96" />
+</div>
 
 DukOS has a brand: every agent is a duck in a costume that matches its role. The orchestrator is **The Maestro** (tuxedo, conductor's baton). The researcher is **The Detective** (trenchcoat, magnifying glass). QA is **The Inspector** (hard hat, clipboard, disapproving look).
 
 It's deliberately a little silly — and it makes the system memorable, the docs readable, and the community fun to be part of.
+
+**Brand colors:** `#FFE70F` primary · `#FF9900` secondary · `#DBA300` accent
+
+<img src="docs/assets/brand-colors.png" alt="DukOS brand colors" width="440" />
 
 ### Contributor tiers
 
@@ -245,11 +256,11 @@ Every contributor earns a duck.
 
 | Tier | Who |
 |---|---|
-| 🥚 **Hatchling** | First issue or doc fix |
-| 🦆 **Dabbler** | First merged PR |
-| 🌊 **Diver** | Active contributor (3+ PRs) |
-| 🪶 **The Flock** | Core maintainers |
-| 👑 **Head Duck** | The founder |
+| **Hatchling** | First issue or doc fix |
+| **Dabbler** | First merged PR |
+| **Diver** | Active contributor (3+ PRs) |
+| **The Flock** | Core maintainers |
+| **Head Duck** | The founder |
 
 Top contributors can have a real duck from the founder's physical duck collection — gathered from dozens of countries — named after them. This is not a joke.
 
@@ -297,5 +308,9 @@ New agents, better prompts, cross-platform fixes, clearer docs — all welcome. 
 
 ---
 
-*Built by a solo founder who runs an entire project portfolio on it. Powered by Claude Code.*
-*DukOS — your startup's night shift.*
+<div align="center">
+
+*Built by a solo founder who runs an entire project portfolio on it. Powered by Claude Code.*<br/>
+**DukOS — your startup's night shift.**
+
+</div>

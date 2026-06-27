@@ -62,7 +62,7 @@ Read logs/token-usage.json — summarize agent efficiency (total estimated token
 [X posts this week. Top performer: "[post excerpt]" on [platform] — Y impressions. Avg engagement: Z%]
 
 ## App Store
-[your app: X installs today / Y total. Rating: Z ⭐ (N reviews)]
+[your app: X installs today / Y total. Rating: Z (N reviews)]
 
 ## Content Queue
 [X items in queue. X new files added today.]

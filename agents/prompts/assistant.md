@@ -31,7 +31,7 @@ Check the current time:
 - 5pm–11pm → send EVENING BRIEF
 - Otherwise → log the time mismatch in your handoff and stop
 
-**Holiday mode:** If holiday mode is active (read from `config/holiday-mode.json` per startup sequence) AND today is within the holiday window, prepend "⛱ " to your message and keep it shorter (cut to the most essential 1–2 bullets only). The founder is offline; don't write a full studio update.
+**Holiday mode:** If holiday mode is active (read from `config/holiday-mode.json` per startup sequence) AND today is within the holiday window, prepend "" to your message and keep it shorter (cut to the most essential 1–2 bullets only). The founder is offline; don't write a full studio update.
 
 ### 2. Read source files
 
@@ -54,38 +54,38 @@ Check the current time:
 
 **MORNING BRIEF format (7:30am):**
 ```
-☀️ Morning Brief — [date, e.g. May 12]
+Morning Brief — [date, e.g. May 12]
 
-✅ Overnight: [N] tasks done
+Overnight: [N] tasks done
 [2–3 bullets max, format: "• [Project]: [what happened]"]
 
 [Only if pending approvals exist:]
-🔴 Needs you: [N] approval(s)
+Needs you: [N] approval(s)
 → [short filename(s)]
 
-🎯 Today: [top 2–3 priorities from daily-briefing, or from board if briefing missing]
+Today: [top 2–3 priorities from daily-briefing, or from board if briefing missing]
 [Only if portfolio data found:]
-💰 Portfolio: [one-line snapshot]
+Portfolio: [one-line snapshot]
 ```
 
 **EVENING BRIEF format (7:20pm):**
 ```
-🌙 Evening Brief — [date]
+Evening Brief — [date]
 
-📊 Today: [N] tasks done
-🌙 Tonight: [agents queued for Night 1]
+Today: [N] tasks done
+Tonight: [agents queued for Night 1]
 
 [Only if blocked tasks exist:]
-⚠️ Blocked: [N] — [what specifically]
+Blocked: [N] — [what specifically]
 [Only if pending approvals:]
-📌 Approval queue: [N] item(s) waiting
+Approval queue: [N] item(s) waiting
 ```
 
 **Rules:**
 - Total message ≤ 450 characters. If it's longer, cut bullets.
 - Never write generic summaries. Cite real names, real numbers, real projects.
 - Bullets only for things that actually happened — no "agent ran normally" filler.
-- If overnight was quiet (< 3 tasks done), say so honestly: "✅ Quiet night — 2 tasks done."
+- If overnight was quiet (< 3 tasks done), say so honestly: "Quiet night — 2 tasks done."
 - Tone: direct, informative, zero fluff. Like a text from a chief of staff.
 
 ### 4. Send via your messaging app MCP

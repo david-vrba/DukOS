@@ -38,7 +38,7 @@ CHANGED FILES: <list>
 COMPLETION: <did the work cover the full goal? name any gaps>
 ```
 
-Any gap between goal and changed files is a 🔴 Blocker.
+Any gap between goal and changed files is a Blocker.
 
 ---
 
@@ -150,7 +150,7 @@ Check for these in all code written or modified (both modes):
 
 Also run the full security module loaded in Phase 2 (both modes — LOW scoped to changed files, HIGH full codebase).
 
-**Any security failure is automatically a 🔴 Blocker.**
+**Any security failure is automatically a Blocker.**
 
 ### Logic & Edge Cases
 Check for these in all code written or modified (both modes):
@@ -198,21 +198,21 @@ If no tests exist: run build + tsc as minimum. Note absence of tests as a findin
 
 Number issues sequentially across all tiers (1, 2, 3... not restarting per tier). Only list tiers that have issues — omit empty tiers entirely. Be specific: file path + line number on every issue.
 
-Status: **FAIL** = any 🔴 Blocker present. **WARN** = warnings or nitpicks only, no blockers. **PASS** = no issues.
+Status: **FAIL** = any Blocker present. **WARN** = warnings or nitpicks only, no blockers. **PASS** = no issues.
 
 ```
 SANITY CHECK — [HIGH/LOW] — [PASS / WARN / FAIL]
 <stack> | Goal: <one sentence>
 
-🔴 Blockers
+Blockers
   1. <issue> [file:line]
      → <fix>
 
-🟡 Warnings
+Warnings
   2. <issue> [file:line]
      → <fix>
 
-🔵 Nitpicks
+Nitpicks
   3. <issue> [file:line] → <fix>
 
 Tests: <PASS (X) / FAIL (X failed) / tsc PASS / tsc FAIL / NO TESTS>
@@ -234,6 +234,6 @@ Verdict: READY
 ## Rules
 
 - **Report first, fix second.** Never auto-fix without confirmation.
-- **Security failures are always 🔴 Blockers.** No exceptions.
+- **Security failures are always Blockers.** No exceptions.
 - **Every issue needs a location.** "import path wrong" is useless. "line 12 of auth.ts imports from ../../utils/hash but file is at ../utils/hash" is useful.
-- **Completion gaps are 🔴 Blockers.** If the goal was "add auth to 3 routes" and only 2 were touched, that's a blocker regardless of what else passes.
+- **Completion gaps are Blockers.** If the goal was "add auth to 3 routes" and only 2 were touched, that's a blocker regardless of what else passes.

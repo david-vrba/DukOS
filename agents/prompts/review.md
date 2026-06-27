@@ -88,45 +88,45 @@ This is your Layer 2 role in the System Change Tracking system. Read `SYSTEM_CHA
 
 ## Review Checklist
 
-Mark every item: ✅ PASS / ⚠️ WARNING / 🚨 CRITICAL / ℹ️ INFO
+Mark every item: PASS / WARNING / CRITICAL / INFO
 
 ### SECURITY
 
-- No API keys, secrets, tokens, passwords in diff → 🚨 CRITICAL if found
+- No API keys, secrets, tokens, passwords in diff → CRITICAL if found
   Patterns to grep for: `key=`, `secret=`, `password=`, `token=`, `Bearer `, `sk-`, `pk-`, `AIza`, `AKIA`, `_KEY=`, `_SECRET=`
-- No hardcoded production credentials or auth strings → 🚨 CRITICAL
-- No `eval()`, `exec()`, `os.system()`, `subprocess` with string concatenation → 🚨 CRITICAL
-- No new `require`/`import` of packages not present in `package.json` or `requirements.txt` → ⚠️ WARNING
-- No SQL via string concatenation (use parameterized queries / ORM) → 🚨 CRITICAL
+- No hardcoded production credentials or auth strings → CRITICAL
+- No `eval()`, `exec()`, `os.system()`, `subprocess` with string concatenation → CRITICAL
+- No new `require`/`import` of packages not present in `package.json` or `requirements.txt` → WARNING
+- No SQL via string concatenation (use parameterized queries / ORM) → CRITICAL
 
 ### CORRECTNESS (hallucination detection)
 
 This is critical — LLM agents frequently hallucinate file paths, function names, and imports.
 
-- Imports reference files that actually exist in the repo → 🚨 CRITICAL if not
+- Imports reference files that actually exist in the repo → CRITICAL if not
   (Use `ls` or `glob` to verify path exists before flagging)
-- Function calls reference functions actually defined in the codebase → 🚨 CRITICAL if not
+- Function calls reference functions actually defined in the codebase → CRITICAL if not
   (Grep for function definition to verify)
-- Referenced env vars exist in `.env.example` → ⚠️ WARNING if not
-- Referenced pnpm scripts exist in `package.json` → ⚠️ WARNING if not
-- File paths use forward slashes or `path.join` — no hardcoded absolute paths → ⚠️ WARNING
+- Referenced env vars exist in `.env.example` → WARNING if not
+- Referenced pnpm scripts exist in `package.json` → WARNING if not
+- File paths use forward slashes or `path.join` — no hardcoded absolute paths → WARNING
 
 ### AGENT INTEGRITY
 
-- Commit message format: `[agent-name]: [task-id] [description]` → ⚠️ WARNING if wrong
-- Files staged are within the agent's allowed git scope (see _shared-rules.md git scope table) → ⚠️ WARNING if agent staged outside scope
-- No modifications to system files: `CLAUDE.md`, `_shared-rules.md`, `agents/prompts/`, `run.sh`, `security.md` → 🚨 CRITICAL if any agent modified these (only the founder / Claude Code should touch these)
-- No writes to `tasks/board.md` by non-orchestrator agents → 🚨 CRITICAL
-- No writes to `reports/approved/` by agents (only the founder moves files here) → 🚨 CRITICAL
+- Commit message format: `[agent-name]: [task-id] [description]` → WARNING if wrong
+- Files staged are within the agent's allowed git scope (see _shared-rules.md git scope table) → WARNING if agent staged outside scope
+- No modifications to system files: `CLAUDE.md`, `_shared-rules.md`, `agents/prompts/`, `run.sh`, `security.md` → CRITICAL if any agent modified these (only the founder / Claude Code should touch these)
+- No writes to `tasks/board.md` by non-orchestrator agents → CRITICAL
+- No writes to `reports/approved/` by agents (only the founder moves files here) → CRITICAL
 
 ### CODE QUALITY
 
-- No `console.log` / `print()` in production code → ⚠️ WARNING
-- No TODO/FIXME without linked task ID (e.g., `// TODO: task-012`) → ℹ️ INFO
-- No commented-out dead code blocks → ℹ️ INFO
-- Async operations have error handling (`try/catch` or `.catch()`) → ⚠️ WARNING
-- No empty catch blocks (`catch(e) {}`) → ⚠️ WARNING
-- No floating promises (missing `await`) → 🚨 CRITICAL
+- No `console.log` / `print()` in production code → WARNING
+- No TODO/FIXME without linked task ID (e.g., `// TODO: task-012`) → INFO
+- No commented-out dead code blocks → INFO
+- Async operations have error handling (`try/catch` or `.catch()`) → WARNING
+- No empty catch blocks (`catch(e) {}`) → WARNING
+- No floating promises (missing `await`) → CRITICAL
 
 ---
 
@@ -143,13 +143,13 @@ This is critical — LLM agents frequently hallucinate file paths, function name
 
 ## Findings
 
-### 🚨 CRITICAL (N)
+### CRITICAL (N)
 - `[hash] [file:line]` — [description]
 
-### ⚠️ WARNING (N)
+### WARNING (N)
 - `[hash] [file:line]` — [description]
 
-### ℹ️ INFO (N)
+### INFO (N)
 - `[hash] [file:line]` — [description]
 
 ## Summary

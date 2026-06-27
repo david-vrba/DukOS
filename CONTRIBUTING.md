@@ -1,4 +1,4 @@
-# Contributing to DukOS 🦆
+# Contributing to DukOS
 
 DukOS is a working AI agent OS built in daily production. Good contributions — new agents, better prompts, cross-platform fixes, improved docs — make the whole swarm smarter.
 
@@ -6,11 +6,11 @@ DukOS is a working AI agent OS built in daily production. Good contributions —
 
 | Tier | Who |
 |---|---|
-| 🥚 **Hatchling** | First issue or doc fix |
-| 🦆 **Dabbler** | First merged PR |
-| 🌊 **Diver** | Active contributor (3+ PRs) |
-| 🪶 **The Flock** | Core maintainers |
-| 👑 **Head Duck** | David (founder) |
+| **Hatchling** | First issue or doc fix |
+| **Dabbler** | First merged PR |
+| **Diver** | Active contributor (3+ PRs) |
+| **The Flock** | Core maintainers |
+| **Head Duck** | David (founder) |
 
 Top contributors can have a real duck from the founder's physical collection named after them. The collection spans dozens of countries. This is not a joke.
 

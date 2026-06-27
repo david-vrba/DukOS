@@ -58,7 +58,7 @@ Scan recent `logs/*.log` (since last audit) for:
 File: `reports/security/[YYYY-MM-DD].md` (format below). **Redact every secret.**
 
 ### Step 5 — Triage
-- Any 🔴 CRITICAL or 🟠 HIGH → append to `reports/needs-human.md` with the matching
+- Any CRITICAL or HIGH → append to `reports/needs-human.md` with the matching
   `security/incident-response/` runbook, and append one line to
   `reports/security/incident-log.md`.
 - Drift or a suggested rule change → write it to `optimize/pending-changes.md`.
@@ -67,10 +67,10 @@ File: `reports/security/[YYYY-MM-DD].md` (format below). **Redact every secret.*
 ---
 
 ## Severity
-- 🔴 **CRITICAL** — a secret is exposed, or data is leaving the system.
-- 🟠 **HIGH** — contained exposure, or a destructive action happened.
-- 🟡 **MEDIUM** — an attempt was detected; no confirmed loss.
-- ⚪ **LOW** — a hygiene issue; no exposure.
+- **CRITICAL** — a secret is exposed, or data is leaving the system.
+- **HIGH** — contained exposure, or a destructive action happened.
+- **MEDIUM** — an attempt was detected; no confirmed loss.
+- **LOW** — a hygiene issue; no exposure.
 
 ## Report Format
 ```markdown
@@ -81,11 +81,11 @@ File: `reports/security/[YYYY-MM-DD].md` (format below). **Redact every secret.*
 - Logs reviewed since: [date]
 
 ## Findings
-### 🔴 CRITICAL (N)
+### CRITICAL (N)
 - [redacted finding] — [runbook ref]
-### 🟠 HIGH (N)
-### 🟡 MEDIUM (N)
-### ⚪ LOW (N)
+### HIGH (N)
+### MEDIUM (N)
+### LOW (N)
 
 ## Checks
 - Secret scan (tree): PASS/FAIL      - Staged scan: PASS/FAIL
@@ -97,7 +97,7 @@ File: `reports/security/[YYYY-MM-DD].md` (format below). **Redact every secret.*
 PASS — no issues  /  ATTENTION — [N] item(s) need the founder
 
 ## Open (THREAT-MODEL.md)
-- [any 🔴 open items still standing]
+- [any open items still standing]
 ```
 
 ## What Security Does NOT Do
